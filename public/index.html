@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Química</h1>
+    </div>
+
+    <!-- Preguntas de texto -->
+    <div class="container">
+        <div class="row-container">
+            <div class="row">
+                <h2>1. ¿Cuál es la masa atómica del Helio?</h2>
+                <input type="text" id="response1" name="response">
+            </div>
+            <div class="row">
+                <h2>2. ¿Cuál es la masa atómica del Litio?</h2>
+                <input type="text" id="response2" name="response">
+            </div>
+        </div>
+    </div>
+
+    <!-- Actividad de arrastrar y soltar -->
+    <div class="container">
+        <h2>Arrastra a donde corresponde</h2>
+        <div class="row-container">
+            <div class="row">
+                <div class="image-container">
+                    <img src="imagenes/mouse.jpg" id="draggable1" draggable="true">
+                </div>
+                <div class="drop-zone" id="dropzone1">Mouse</div>
+            </div>
+            <div class="row">
+                <div class="image-container">
+                    <img src="imagenes/pc.jpg" id="draggable2" draggable="true">
+                </div>
+                <div class="drop-zone" id="dropzone2">PC</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button id="enviarBtn">Enviar</button>
+        <p id="calificacion"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
