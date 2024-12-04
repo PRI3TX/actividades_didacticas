@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Quiz de Química</h1>
+        <h1 id="usuarioNombre">Quiz de Química</h1>
     </div>
 
-    <!-- Preguntas de texto -->
+    <!-- Preguntas y zonas de arrastre -->
     <div class="container">
         <div class="row-container">
             <div class="row">
@@ -25,7 +25,6 @@
         </div>
     </div>
 
-    <!-- Actividad de arrastrar y soltar -->
     <div class="container">
         <h2>Arrastra a donde corresponde</h2>
         <div class="row-container">
@@ -49,9 +48,18 @@
         <p id="calificacion"></p>
     </div>
 
+    <script>
+        // Mostrar el nombre del usuario en el título
+        const params = new URLSearchParams(window.location.search);
+        const nombreUsuario = params.get("nombre") || "Usuario Anónimo";
+        document.getElementById("usuarioNombre").textContent = `Bienvenido, ${nombreUsuario}`;
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
+
+
+
 
 
 

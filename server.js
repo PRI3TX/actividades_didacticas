@@ -45,9 +45,18 @@ app.use((req, res, next) => {
     next();
 });
 
-// Ruta principal
+// Ruta principal para redirigir a la página de inicio
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'pagina_de_inicio.html'));
+    res.sendFile(path.join(__dirname, 'public', 'pagina de inicio.html'));
+});
+
+// Ruta para el quiz
+app.get('/quiz.html', (req, res) => {
+    const nombre = req.query.nombre;
+    if (!nombre) {
+        return res.redirect('/'); // Redirige a la página de inicio si no se ingresó el nombre
+    }
+    res.sendFile(path.join(__dirname, 'public', 'quiz.html'));
 });
 
 // Ruta para guardar respuestas
